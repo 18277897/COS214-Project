@@ -9,36 +9,22 @@
 using namespace std;
 
 
-RaceStrategy::RaceStrategy(){
+RaceStrategy::RaceStrategy(){}
 
-}
+SoftCompound::SoftCompound(){}
 
-SoftCompound::SoftCompound(){
-
-}
-string SoftCompound::chooseStrategy(){
-
-}
 void SoftCompound::print(){
     cout<<"Soft Compound has been chosen."<<endl;
 }
 
-MediumCompound::MediumCompound(){
+MediumCompound::MediumCompound(){}
 
-}
-string MediumCompound::chooseStrategy(){
-
-}
 void MediumCompound::print(){
     cout<<"Medium Compound has been chosen."<<endl;
 }
 
-HardCompound::HardCompound(){
+HardCompound::HardCompound(){}
 
-}
-string HardCompound::chooseStrategy(){
-
-}
 void HardCompound::print(){
     cout<<"Hard component has been chosen."<<endl;
 }

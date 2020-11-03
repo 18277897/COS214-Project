@@ -8,15 +8,15 @@
 #include "Simulator.h"
 #include "CompMediator.h"
 
+///Component is the client for the Strategy
+///
+///It is used to implement the Strategy
+
 class Component {
-private:
-    //TestingStrategy* strategy;
-    Simulator* simm;
 public:
+	///This is an empty constructor
     Component();
-
-    Component(Simulator *sim);
-
+	///This member function initiates the simulator.
     void algorithm();
 
 };
