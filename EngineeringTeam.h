@@ -12,7 +12,7 @@ class EngineeringTeam {
 private:
     int tyres[5];
     
-    //RaceCar* car;
+    RaceCar* car;
     //gonna need the department
 public:
     EngineeringTeam();
@@ -21,7 +21,9 @@ public:
     virtual Tyre* produceProduct() ;
 
     //upgrading of car
-    virtual void beginWork(RaceCar* car) =0;
+    virtual void beginWork(RaceCar* car) {};
+    //getCar for department 
+    RaceCar* getCar();
 
 };
 

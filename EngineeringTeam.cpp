@@ -30,6 +30,7 @@ void EngineeringTeam::chooseStrategy() {
     }
 }
 
+
 Tyre * EngineeringTeam::produce() {
     SoftCreator* soft = new SoftCreator();
     MediumCreator* med = new MediumCreator();
@@ -56,6 +57,10 @@ Tyre * EngineeringTeam::produce() {
 }
 
 Tyre* EngineeringTeam::produceProduct(){}
+
+RaceCar* EngineeringTeam::getCar(){
+    return this->car;
+}
 
 
 SoftCreator::SoftCreator() {}

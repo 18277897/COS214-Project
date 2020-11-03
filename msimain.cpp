@@ -22,6 +22,11 @@
 //chartered plane 
 #include "CharteredPlane.h"
 
+//racestratgy & engineering team
+#include "RaceStrategy.h"
+#include "EngineeringTeam.h"
+#include "Component.h"
+
 
 using namespace std;
 int main(){
