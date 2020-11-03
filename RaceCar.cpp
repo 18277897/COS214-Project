@@ -55,8 +55,9 @@ void RaceCar::raceAction() {
 }
 
 void RaceCar::serviceCar() {
-	// TODO - implement RaceCar::serviceCar
-	throw "Not yet implemented";
+    cout<<"Servicing car...."<<endl;
+    cout<<"Car "+getName()+" serviced"<<endl;
+    isServiced=true;
 }
 
 void RaceCar::createMement() {
