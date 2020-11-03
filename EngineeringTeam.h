@@ -1,11 +1,8 @@
-//
-// Created by 27728 on 2020/11/02.
-//
-
 #ifndef UNTITLED13_ENGINEERINGTEAM_H
 #define UNTITLED13_ENGINEERINGTEAM_H
 #include "Tyre.h"
 #include "RaceStrategy.h"
+#include "RaceCar.h"
 
 ///EngineeringTeam is the Context participant of the Strategy pattern aswell as the Creator participant for the Factory method
 ///
@@ -15,6 +12,9 @@ class EngineeringTeam {
 private:
     ///Chosen compounds for each set of tyres
     int tyres[5];
+
+    RaceCar* car;
+    //gonna need the department
 public:
 	///This is the constructor
     EngineeringTeam();
@@ -24,6 +24,11 @@ public:
     void chooseStrategy();
 	///This is an abstract member function that will be implemented in the concrete creator (SoftCreator, MediumCreator, HardCreator)
     virtual Tyre* produceProduct();
+
+    //upgrading of car
+    virtual void beginWork(RaceCar* car){};
+    //getCar for department 
+    RaceCar* getCar();
 };
 
 ///SoftCreator is the ConcreteCreator for the Factory method

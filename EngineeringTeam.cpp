@@ -57,6 +57,9 @@ Tyre * EngineeringTeam::produce() {
 
 Tyre* EngineeringTeam::produceProduct(){}
 
+RaceCar* EngineeringTeam::getCar(){
+    return this->car;
+}
 
 SoftCreator::SoftCreator() {}
 Tyre * SoftCreator::produceProduct() {
