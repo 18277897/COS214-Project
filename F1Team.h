@@ -1,39 +1,23 @@
-#ifndef F1TEAM_H
-#define F1TEAM_H
-
-#include <string>
-#include <stdlib.h>
-#include <time.h>
-#include <iostream>
-#include "RaceCar.h"
-#include "EngineeringTeam.h"
-#include "CurrentF1SeasonTeam.h"
-#include "NextF1SeasonTeam.h"
-
-
+#include <exception>
 using namespace std;
 
-class F1Team {
+#ifndef __F1Team_h__
+#define __F1Team_h__
 
-private:
-	RaceCar* car1;
-	RaceCar* car2;
-	EngineeringTeam* EngineeringDept;
-	
+// #include "Track.h"
+// #include "Main.h"
 
-public:
-	F1Team();
-	F1Team(RaceCar* firstCar, RaceCar* secondCar);
+class Track;
 
-	//car setters and getters
-	void setCar(int carNum, RaceCar* car);
-	void setCars(RaceCar* firstCar, RaceCar* secondCar);
-	RaceCar* getCar(int carNum);
+class F1Team;
 
-	//engineering team setters and getters
-	void setETeam(EngineeringTeam* ET);
-	EngineeringTeam* getETeam();
-
+/// F1Team is the Observer participant in the Observer pattern.
+///
+/// This class defines the interface of the CarPlacing class.
+class F1Team
+{
+    /// This is an abstract member function that will be implemented in CarPlacing
+	public: virtual void update() = 0;
 };
 
 #endif
