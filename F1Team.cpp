@@ -38,3 +38,10 @@ RaceCar* F1Team::getCar(int carNum){
 	}
 
 }
+
+void F1Team::setETeam(EngineeringTeam* ET){
+	this->EngineeringDept = ET;
+}
+EngineeringTeam* F1Team::getETeam(){
+	return this->EngineeringDept;
+}
