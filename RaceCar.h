@@ -19,19 +19,23 @@ private:
 	string name;
 
 public:
-	
+	//This is the default constructor for a racecar
 	RaceCar();
+	//This is a constructor which also sets the name of a race car
 	RaceCar(string n);
+	//This is a constructor which sets all the variables
 	RaceCar(bool iS,int tP,double fL,double wL,string n);
-	//Prototype
+	//This is the prototypical cloning of a car
 	RaceCar* clone(string n);
 
 
-	//Getters and setters [Just name for now -for the teams]
+	//This gets the name of the car
 	string getName();
+	//This sets the name of the car
 	void setName(string n);
-
+	//This gets if the car has been serviced or not
 	bool getServiced();
+	//This sets whether the car has been serviced or not
 	void setServiced(bool s);
 
 	//not yet done

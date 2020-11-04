@@ -25,9 +25,10 @@ public:
 	///This is an abstract member function that will be implemented in the concrete creator (SoftCreator, MediumCreator, HardCreator)
     virtual Tyre* produceProduct();
 
-    //upgrading of car
-    virtual void beginWork(RaceCar* car){};
-    //getCar for department 
+    //Virtual / abstract function used to call the improvePart() function of all the departments
+    virtual void beginWork(RaceCar* car);
+
+    //Getter which returns a car mainly used by the department
     RaceCar* getCar();
 };
 

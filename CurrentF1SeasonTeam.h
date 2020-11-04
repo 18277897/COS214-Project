@@ -12,9 +12,10 @@ class CurrentF1SeasonTeam : public EngineeringTeam{
 private:
 
 public:
-
-CurrentF1SeasonTeam(){};
-virtual void beginWork(RaceCar* car){ /*basically for upgrading the car, willl be implimented once all work is done*/};
+    //constructor for the currentf1Seasonteam [engineering] which is inherited from EngineeringTeam
+    CurrentF1SeasonTeam(){};
+    //Function used to call the improvePart() function of all the departments
+    virtual void beginWork(RaceCar* car){ /*basically for upgrading the car, willl be implimented once all work is done*/};
 
 
 };

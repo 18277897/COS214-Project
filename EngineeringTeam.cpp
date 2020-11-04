@@ -57,6 +57,10 @@ Tyre * EngineeringTeam::produce() {
 
 Tyre* EngineeringTeam::produceProduct(){}
 
+void EngineeringTeam::beginWork(RaceCar* car){
+
+}
+
 RaceCar* EngineeringTeam::getCar(){
     return this->car;
 }

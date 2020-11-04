@@ -12,8 +12,9 @@ class Building : public Equipment {
 
 
 public:
+	//Constructor for the building equipment
 	Building();
-
+	//This assembles the building equipment at the race
 	virtual void assembleEquipment();
 };
 
