@@ -6,6 +6,8 @@
 #define UNTITLED13_ENGINEERINGTEAM_H
 #include "Tyre.h"
 #include "RaceStrategy.h"
+#include "Component.h"
+#include "newComponents.h"
 
 ///EngineeringTeam is the Context participant of the Strategy pattern aswell as the Creator participant for the Factory method
 ///
@@ -15,6 +17,8 @@ class EngineeringTeam {
 private:
     ///Chosen compounds for each set of tyres
     int tyres[5];
+    Component* component; //!> Component member
+
 public:
 	///This is the constructor
     EngineeringTeam();
@@ -24,6 +28,21 @@ public:
     void chooseStrategy();
 	///This is an abstract member function that will be implemented in the concrete creator (SoftCreator, MediumCreator, HardCreator)
     virtual Tyre* produceProduct();
+
+    /// Destructor to deallocate component member
+    ~EngineeringTeam();
+
+    /**
+     * Function provides component for the simulation
+     * @param component the component to simulate
+     */
+    void simulateComponent(Component* component);
+
+    /// Accessor method for private component member
+    Component* getComponent();
+
+    ///This member function initiates the simulator.
+    void algorithm();
 };
 
 ///SoftCreator is the ConcreteCreator for the Factory method

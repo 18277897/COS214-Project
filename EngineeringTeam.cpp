@@ -75,3 +75,26 @@ Tyre * HardCreator::produceProduct() {
     Tyre* ty = new Hard();
     return ty;
 }
+
+EngineeringTeam::~EngineeringTeam() {
+    delete this->component;
+}
+
+void EngineeringTeam::simulateComponent(Component *comp) {
+    this->component=comp;
+}
+
+Component * EngineeringTeam::getComponent() {
+    return this->component;
+}
+
+void EngineeringTeam::algorithm() {
+
+    TestMediator* com = new TestMediator("Test1");
+    newComponents* breaks = new newComponents(getComponent());
+    trackFamiliarize* track = new trackFamiliarize();
+    com->notify(true);
+    track->print();
+    breaks->print();
+    com->notify(false);
+}

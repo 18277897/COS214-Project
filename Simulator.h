@@ -24,19 +24,19 @@ public:
 
 };
 
-///newComponents is the ConcreteColleagues participant in the Mediator pattern
-///
-///This tests the new components
-
-class newComponents: public Simulator {
-public:
-	///This is the constructor
-    newComponents();
-	///Changes the new components out when the fail
-    void change();
-	///Notifies when the new components have successfully been tested
-    void print();
-};
+/////newComponents is the ConcreteColleagues participant in the Mediator pattern
+/////
+/////This tests the new components
+//
+//class newComponents: public Simulator {
+//public:
+//	///This is the constructor
+//    newComponents();
+//	///Changes the new components out when the fail
+//    void change();
+//	///Notifies when the new components have successfully been tested
+//    void print();
+//};
 
 ///trackFamiliarize is the ConcreteColleagues participant in the Mediator pattern
 ///
