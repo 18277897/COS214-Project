@@ -80,4 +80,14 @@ void RaceCar::createMemento() {
 	throw "Not yet implemented";
 }
 
+RaceCar::~RaceCar() {
+    delete this->current_state;
+}
 
+void RaceCar::setState(RaceCarState *newState) {
+    this->current_state=newState;
+}
+
+RaceCarState * RaceCar::getState() {
+    return this->current_state;
+}

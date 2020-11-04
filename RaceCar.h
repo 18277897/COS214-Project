@@ -6,6 +6,7 @@
 #include <time.h>
 #include <iostream>
 //#include "PrototypeCar.h"
+#include "RaceCarState.h"
 
 using namespace std;
 
@@ -17,6 +18,7 @@ private:
 	double fuelLevel;
 	double waterLevel;
 	string name;
+    RaceCarState* current_state; //!< state member
 
 public:
 	
@@ -25,6 +27,8 @@ public:
 	RaceCar(bool iS,int tP,double fL,double wL,string n);
 	//Prototype
 	RaceCar* clone(string n);
+
+	~RaceCar();
 
 
 	//Getters and setters [Just name for now -for the teams]
@@ -65,7 +69,23 @@ public:
 
 
 
-	
+    /**
+     * Accessor of the name member
+    * @return the name of the driver
+    */
+    string getDriver();
+
+    /**
+     * Mutator for the state of the car
+     * @param newState the state to change to
+     */
+    void setState(RaceCarState* newState);
+
+    /**
+     * Accessor to the current state of the car
+     * @return the current state of the car
+     */
+    RaceCarState* getState();
 
 	
 };
