@@ -1,17 +1,23 @@
 //
-// Created by 27728 on 2020/10/23.
+// Created by Suzel Alberts
 //
 
 #include "Component.h"
+#include "iostream"
+using namespace std;
 
-Component::Component(){}
+Component::Component() {
+    cout<<"New component created!"<<endl;
+}
 
-void Component::algorithm(){
-    TestMediator* com = new TestMediator("Test1");
-    newComponents* breaks = new newComponents();
-    trackFamiliarize* track = new trackFamiliarize();
-    com->notify(true);
-    track->print();
-    breaks->print();
-    com->notify(false);
+Component::~Component() {
+    delete testingStrategy;
+}
+
+void Component::setTestingStrategy(TestingStrategy *strategy) {
+    this->testingStrategy=strategy;
+}
+
+void Component::testComponent(){
+    testingStrategy->performTest();
 }

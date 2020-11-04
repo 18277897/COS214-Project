@@ -1,25 +1,41 @@
 //
-// Created by 27728 on 2020/10/23.
+// Created by Suzel Alberts
 //
 
-#ifndef UNTITLED13_COMPONENT_H
-#define UNTITLED13_COMPONENT_H
-//#include "TestingStrategy.h"
+#ifndef COMPONENT_H
+#define COMPONENT_H
+#include "TestingStrategy.h"
 #include "Simulator.h"
 #include "CompMediator.h"
 
-///Component is the client for the Strategy
-///
-///It is used to implement the Strategy
+/**
+ * Context participant of the Strategy pattern.
+ * Contains function to set strategy.
+ * Contains functions for component testing and simulation.
+ */
 
 class Component {
+private:
+
+    TestingStrategy* testingStrategy; //!< TestingStrategy member
+
 public:
-	///This is an empty constructor
+    /// Default constructor
     Component();
-	///This member function initiates the simulator.
-    void algorithm();
+
+    /// Destructor for deallocating TestingStrategy member
+    ~Component();
+
+    /**
+     * Function to set the testing strategy chosen by the team
+     * @param strategy chosen strategy
+     */
+    void setTestingStrategy(TestingStrategy* strategy);
+
+    /// Test function implements chosen strategy implementation
+    void testComponent();
+
 
 };
 
-
-#endif //UNTITLED13_COMPONENT_H
+#endif
