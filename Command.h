@@ -3,7 +3,7 @@
 
 
 #include "RaceCar.h"
-/// This class acts as an interface for the execute function
+/// This class acts as an interface for the execute function. It is the Command participant in the Command pattern
 class Command {
 
 private:
@@ -18,7 +18,7 @@ public:
     /**
      * This is the Command destructor
      * */
-    ~Command();
+    virtual ~Command();
     /**
      *
      * @return receiver, which is RaceCar object pointer

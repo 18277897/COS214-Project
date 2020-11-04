@@ -37,13 +37,31 @@ public:
 	//not yet done
 	void raceAction();
     /**
-     * This function shows that the car is getting serviced
+     * The car's aerodynamics gets serviced in this function
      * @return this function doesn't return anything
      *
      * */
-	void serviceCar();
+    void serviceCarAerodynamics();
+    /**
+     * The car's electronics gets serviced in this function
+     * @return this function doesn't return anything
+     *
+     * */
+    void serviceCarElectronics();
+    /**
+     * The car's chassis gets serviced in this function
+     * @return this function doesn't return anything
+     *
+     * */
+    void serviceCarChassis();
+    /**
+     * The car's engine gets serviced in this function
+     * @return this function doesn't return anything
+     *
+     * */
+    void serviceCarEngine();
 
-	void createMement();
+	void createMemento();
 
 
 

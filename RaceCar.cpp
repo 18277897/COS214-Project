@@ -54,13 +54,28 @@ void RaceCar::raceAction() {
 	throw "Not yet implemented";
 }
 
-void RaceCar::serviceCar() {
-    cout<<"Servicing car...."<<endl;
-    cout<<"Car "+getName()+" serviced"<<endl;
-    isServiced=true;
+void RaceCar::serviceCarAerodynamics() {
+    cout<<"Servicing car's aerodynamics...."<<endl;
+    cout<<"Car "+getName()+"'s aerodynamics serviced"<<endl;
+
 }
 
-void RaceCar::createMement() {
+void RaceCar::serviceCarElectronics() {
+    cout<<"Servicing car's electronics...."<<endl;
+    cout<<"Car "+getName()+"'s electronics serviced"<<endl;
+}
+
+void RaceCar::serviceCarChassis() {
+    cout<<"Servicing car's chassis...."<<endl;
+    cout<<"Car "+getName()+"'s chassis serviced"<<endl;
+}
+
+void RaceCar::serviceCarEngine() {
+    cout<<"Servicing car's engine...."<<endl;
+    cout<<"Car "+getName()+"'s engine serviced"<<endl;
+}
+
+void RaceCar::createMemento() {
 	// TODO - implement RaceCar::createMement
 	throw "Not yet implemented";
 }
