@@ -6,7 +6,7 @@ using namespace std;
 
 
 #include "DepartmentDecorator.h"
-
+/// This class is an optional department an EngineeringTeam can have
 class Brakes : public DepartmentDecorator {
 public:
     /**
@@ -20,6 +20,7 @@ public:
     * */
     ~Brakes();
     /**
+     * This department tries to make the car go faster in this function by improving its Brakes
      * @return this function doesn't return anything
      * */
     void improvePart();

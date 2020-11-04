@@ -9,9 +9,8 @@
 #include "DepartmentDecorator.h"
 #include "Department.h"
 
-/**
- * This is is the Suspension class, it acts as an optional department
- * */
+/// This class is an optional department an EngineeringTeam can have
+
 class Suspension : public DepartmentDecorator {
 public:
     /**
@@ -26,7 +25,7 @@ public:
     * */
     ~Suspension();
     /**
-     * The Suspension department is added to another department
+     * This department tries to make the car go faster in this function by improving its Brakes
      * @return This function doesn't return anything
      * */
     void improvePart();
