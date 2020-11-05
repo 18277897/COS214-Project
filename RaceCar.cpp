@@ -75,11 +75,6 @@ void RaceCar::serviceCarEngine() {
     cout<<"Car "+getName()+"'s engine serviced"<<endl;
 }
 
-void RaceCar::createMemento() {
-	// TODO - implement RaceCar::createMement
-	throw "Not yet implemented";
-}
-
 RaceCar::~RaceCar() {
     delete this->current_state;
 }
@@ -90,4 +85,49 @@ void RaceCar::setState(RaceCarState *newState) {
 
 RaceCarState * RaceCar::getState() {
     return this->current_state;
+}
+
+void RaceCar::printDetails() {
+    cout<<"RACE CAR INFO:"<<endl;
+    cout<<"-----------------------------"<<endl;
+    cout<<"Driver:          "<<this->name<<endl;
+    cout<<"Tyre pressure:   "<<this->tyrePressure<<endl;
+    cout<<"Fuel level:      "<<this->fuelLevel<<endl;
+    cout<<"Water level:     "<<this->waterLevel<<endl;
+    cout<<"-----------------------------"<<endl;
+}
+
+bool RaceCar::check() {
+    srand(time(NULL));
+
+    int result_tp=rand()%tyrePressure;
+    tyrePressure-=result_tp;
+
+    int wl=waterLevel;
+    double result_wl=rand()%wl;
+    waterLevel-=result_wl;
+
+    int fl=fuelLevel;
+    double result_fl=rand()%fl;
+    fuelLevel-=result_fl;
+
+    if(tyrePressure==0 || waterLevel==0 || fuelLevel==0){
+        return true;
+    }
+
+    return false;
+}
+
+RaceCarMemento * RaceCar::createMemento() {
+    RaceCarMemento* mem = new RaceCarMemento(tyrePressure,fuelLevel,waterLevel,name);
+    return mem;
+}
+
+void RaceCar::restore(RaceCarMemento *mem) {
+    MementoState* state = mem->state;
+
+    this->name=state->getName();
+    this->waterLevel=state->getWaterLevel();
+    this->fuelLevel=state->getFuelLevel();
+    this->tyrePressure=state->getTyrePressure();
 }

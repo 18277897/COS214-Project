@@ -6,10 +6,13 @@
 #include <time.h>
 #include <iostream>
 //#include "PrototypeCar.h"
-#include "RaceCarState.h"
+
+//#include "RaceCarState.h"
+#include "MementoState.h"
+#include "RaceCarMemento.h"
 
 using namespace std;
-
+class RaceCarState; // added to solve linking error
 class RaceCar  {
 
 private:
@@ -25,6 +28,8 @@ public:
 	RaceCar();
 	RaceCar(string n);
 	RaceCar(bool iS,int tP,double fL,double wL,string n);
+
+	RaceCar(int tP,double fL,double wL,string n); // for memento
 	//Prototype
 	RaceCar* clone(string n);
 
@@ -65,10 +70,6 @@ public:
      * */
     void serviceCarEngine();
 
-	void createMemento();
-
-
-
     /**
      * Accessor of the name member
     * @return the name of the driver
@@ -86,6 +87,24 @@ public:
      * @return the current state of the car
      */
     RaceCarState* getState();
+
+    /// Prints out the attribute values of the car
+    void printDetails();
+
+    /// Adjusts the attribute values of the car. Values of 0 indicate that the car needs to be serviced and restored.
+    bool check();
+
+    /**
+     * This function creates the memento
+     * @return the newly created memento is returned
+     */
+    RaceCarMemento* createMemento();
+
+    /**
+     * This function is used when the original memento needs to be retrieved.
+     * @param mem This parameter is used to reinstate the attribute values of the car.
+     */
+    void restore(RaceCarMemento* mem);
 
 	
 };
