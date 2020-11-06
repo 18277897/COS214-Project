@@ -23,5 +23,16 @@ void NonEuropeanRace::addRaceCar(RaceCar* car){
 
 NonEuropeanRace::NonEuropeanRace() {
 	// TODO - implement NonEuropeanRace::NonEuropeanRace
-	//throw "Not yet implemented";
+	this->ship = NULL;
+}
+
+NonEuropeanRace::~NonEuropeanRace(){
+
+	delete ship;
+	for(int i =0; i < cars.size() ; i++){
+		delete cars.operator[](i);
+	}
+	for(int i =0; i < teams.size() ; i++){
+		delete teams.operator[](i);
+	}
 }

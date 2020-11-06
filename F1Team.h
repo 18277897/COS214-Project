@@ -58,6 +58,8 @@ public:
 
     /// This is an abstract member function that will be implemented in CarPlacing
     virtual void update();
+
+    ~F1Team();
 };
 
 #endif

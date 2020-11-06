@@ -2,6 +2,6 @@
 
 HardCompound::HardCompound(){}
 
-void HardCompound::print(){
+void HardCompound::chooseStrategy(){
     cout<<"Hard component has been chosen."<<endl;
 }

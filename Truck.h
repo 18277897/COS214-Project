@@ -20,6 +20,7 @@ public:
 	void addtoContainer(Equipment* equipment);
 
 	Truck();
+	~Truck();
 };
 
 #endif

@@ -13,3 +13,9 @@ void Ship::addtoContainer(Equipment* equipment) {
 Ship::Ship() {
 	
 }
+
+Ship::~Ship() {
+	for(int i =0; i < equipmentContainer.size() ; i++){
+		delete equipmentContainer.operator[](i);
+	}
+}

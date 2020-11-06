@@ -22,6 +22,7 @@ public:
 	
 
 	Ship();
+	~Ship();
 };
 
 #endif

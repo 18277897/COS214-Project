@@ -1,7 +1,7 @@
 #ifndef Department_h
 #define Department_h
 
-#include "EngineeringTeam.h"
+//#include "EngineeringTeam.h"
 
 /**
  * This class acts as an interface for all other types of departments

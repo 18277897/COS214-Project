@@ -2,6 +2,6 @@
 
 SoftCompound::SoftCompound(){}
 
-void SoftCompound::print(){
+void SoftCompound::chooseStrategy(){
     cout << "Soft Compound has been chosen." << endl;
 }

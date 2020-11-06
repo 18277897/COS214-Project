@@ -11,6 +11,6 @@ DepartmentDecorator::DepartmentDecorator(Department* department) {
 }
 
 DepartmentDecorator::~DepartmentDecorator() {
-
+    delete department;
 }
 

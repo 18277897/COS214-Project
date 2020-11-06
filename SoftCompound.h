@@ -19,7 +19,7 @@ public:
 	///This is the constructor
     SoftCompound();
 	///Notifies when the Soft Compound has been chosen
-    virtual void print() ;
+    virtual void chooseStrategy() ;
 };
 
 #endif

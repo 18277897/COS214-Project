@@ -150,6 +150,7 @@ int main(){
     Component* carComponent = new Component();
     EngineeringTeam* FFEteam = new EngineeringTeam();
     cout<<endl;
+    //FFEteam.
     FFEteam->simulateComponent(carComponent);
     FFEteam->algorithm();
 
@@ -171,19 +172,21 @@ int main(){
     cout << "Components tested so now upgrading the car (This makes use of the Decorator design pattern)" <<endl;
     cout << "========================================================" << endl;
 
-    Department* AerodynamicsDepartment = new Aerodynamics();
+    /*Department* AerodynamicsDepartment = new Aerodynamics();
     Department* ElectronicsDepartment = new Electronics();
     Department* EngineDepartment = new Engine();
     Department* ChassisDepartment = new Chassis();
 
     AerodynamicsDepartment->improvePart();
     ElectronicsDepartment->improvePart();
-    EngineDepartment->improvePart();
+    EngineDepartment->improvePart();*/
+
+    FFEteam->improveParts();
     //ChassisDepartment->improvePart();
     cout<<"---------------------------------------------------------------"<<endl;
-    // Make chassis department also work on brakes
+    /*// Make chassis department also work on brakes
     DepartmentDecorator *decorator1 = new Brakes(ChassisDepartment);
-    decorator1->improvePart();
+    decorator1->improvePart();*/
 
     cout << "========================================================" << endl;
     cout << "Deciding the strategy and compounds we will use for the race (This makes use of the Strategy and Factory Method design pattern)" <<endl;
@@ -194,15 +197,15 @@ int main(){
     cout<<"/////////////RaceStrategy - Strategy///////////////"<<endl;
     cout<<endl;
 
-    EngineeringTeam * et = new EngineeringTeam();
-    et->chooseStrategy();
+    //EngineeringTeam * et = new EngineeringTeam();
+    FFEteam->chooseStrategy();
 
     /////////////////OrderTyres//////////////////
     cout<<endl;
     cout<<"/////////////OrderTyres - FactoryMethod///////////////"<<endl;
     cout<<endl;
 
-    et->produce();
+    FFEteam->produce();
 
 
     cout << "++++++++++++++++++++++++++++++++++++++" << endl;

@@ -35,6 +35,7 @@ public:
 	virtual void addRaceCar(RaceCar* car);
 	///This is the constructor for the a european race
 	EuropeanRace();
+	~EuropeanRace();
 };
 
 #endif

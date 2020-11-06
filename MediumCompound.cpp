@@ -2,6 +2,6 @@
 
 MediumCompound::MediumCompound(){}
 
-void MediumCompound::print(){
+void MediumCompound::chooseStrategy(){
     cout<<"Medium Compound has been chosen."<<endl;
 }

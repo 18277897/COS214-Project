@@ -15,6 +15,12 @@ F1Team::F1Team(){
 	this->car2 = NULL;
 }
 
+F1Team::~F1Team(){
+	delete this->car1;
+	delete this->car2;
+	delete this->EngineeringDept;
+}
+
 	//setters and getters
 void F1Team::setCar(int carNum, RaceCar* car){
 	if(carNum == 1){

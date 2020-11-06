@@ -18,6 +18,16 @@
 #include "trackFamiliarize.h"
 #include "RaceCar.h"
 
+
+#include "Department.h"
+#include "Engine.h"
+#include "Electronics.h"
+#include "Chassis.h"
+#include "Aerodynamics.h"
+#include "Brakes.h"
+#include "Suspension.h"
+
+#include <vector>
 #include <iostream>
 
 using namespace std;
@@ -25,6 +35,8 @@ using namespace std;
 ///EngineeringTeam is the Context participant of the Strategy pattern aswell as the Creator participant for the Factory method
 ///
 ///
+class Department;
+class Engine;
 class RaceCar;
 class EngineeringTeam {
 private:
@@ -32,6 +44,10 @@ private:
     int tyres[5];
     Component* component; //!> Component member
     RaceCar* car;
+
+    vector<Department*> Departments;
+    vector<RaceStrategy*> RaceStrategies;
+    
 
 public:
 	///This is the constructor
@@ -61,8 +77,13 @@ public:
     ///Virtual / abstract function used to call the improvePart() function of all the departments
     void beginWork(RaceCar* car){};
 
+    void improveParts();
+
     ///Accesor method for private Racecar member
-    //RaceCar* getCar();
+    RaceCar* getCar();
+
+    ///Mutator method for private Racecar member
+    void setCar(RaceCar* c);
 };
 
 ///SoftCreator is the ConcreteCreator for the Factory method

@@ -19,7 +19,7 @@ public:
 	///This is the constructor
     HardCompound();
 	///Notifies when the Hard Compound has been chosen
-    virtual void print();
+    virtual void chooseStrategy();
 };
 
 #endif

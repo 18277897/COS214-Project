@@ -13,3 +13,9 @@ void Truck::addtoContainer(Equipment* equipment) {
 Truck::Truck() {
 	
 }
+
+Truck::~Truck() {
+	for(int i =0; i < equipmentContainer.size() ; i++){
+		delete equipmentContainer.operator[](i);
+	}
+}

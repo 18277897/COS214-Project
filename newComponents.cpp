@@ -5,7 +5,7 @@ using namespace std;
 
 newComponents::newComponents(Component* comp){
     this->component=comp;
-     srand(time(NULL));
+    srand(time(NULL));
 }
 void newComponents::change(){
     cout<<"Component failed and is being replaced."<<endl;

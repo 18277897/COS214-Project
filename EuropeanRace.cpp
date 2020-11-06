@@ -23,3 +23,14 @@ void EuropeanRace::addRaceCar(RaceCar* car){
 EuropeanRace::EuropeanRace() {
 	truck = NULL;
 }
+
+EuropeanRace::~EuropeanRace(){
+
+	delete truck;
+	for(int i =0; i < cars.size() ; i++){
+		delete cars.operator[](i);
+	}
+	for(int i =0; i < teams.size() ; i++){
+		delete teams.operator[](i);
+	}
+}

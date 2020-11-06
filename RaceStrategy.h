@@ -17,7 +17,7 @@ public:
 	///This is the constructor
     //RaceStrategy();
 	///This is an abstract member function that will be implemented in the concrete strategy (SoftCompound, MediumCompound, HardCompound)
-    virtual void print() = 0;
+    virtual void chooseStrategy() = 0;
 };
 
 #endif //UNTITLED13_RACESTRATEGY_H

@@ -4,6 +4,7 @@
 
 #ifndef SIMULATOR_H
 #define SIMULATOR_H
+#include "TestMediator.h"
 
 class CompMediator;
 
@@ -21,6 +22,8 @@ public:
     virtual void change() = 0;
 	///This is an abstract member function that will be implemented in the concrete colleages (newComponents, trackFamiliarize)
     virtual void print() = 0;
+
+    ~Simulator();
 
 };
 

@@ -28,6 +28,7 @@ public:
 	virtual void addRaceCar(RaceCar* car);
 
 	NonEuropeanRace();
+	~NonEuropeanRace();
 };
 
 #endif

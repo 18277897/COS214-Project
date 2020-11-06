@@ -10,6 +10,11 @@ using namespace std;
 Simulator::Simulator(){}
 
 
+Simulator::~Simulator(){
+
+    delete this->medi;
+}
+
 
 
 //newComponents::newComponents(){}

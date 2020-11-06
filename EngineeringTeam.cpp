@@ -11,29 +11,57 @@ using namespace std;
 
 EngineeringTeam::EngineeringTeam(){
     this->component = NULL;
+    Department* AerodynamicsDepartment = new Aerodynamics();
+    Department* ElectronicsDepartment = new Electronics();
+    Department* EngineDepartment = new Engine();
+    Department* ChassisDepartment = new Chassis();
+
+    //decorator functionality
+    DepartmentDecorator* ChassisBrakesDecor = new Brakes(ChassisDepartment);
+    this->Departments.push_back(AerodynamicsDepartment);
+    this->Departments.push_back(ElectronicsDepartment);
+    this->Departments.push_back(EngineDepartment);
+    this->Departments.push_back(ChassisBrakesDecor);
+
+    //strategy functionality
+    
+}
+
+void EngineeringTeam::improveParts(){
+    //cout << "Improving all of " << car->getName() << " parts." <<endl;
+    for(int i =0; i < Departments.size() ; i++){
+		Departments.operator[](i)->improvePart();
+
+	}
 }
 
 void EngineeringTeam::chooseStrategy() {
-    SoftCompound* comp0 = new SoftCompound();
-    MediumCompound* comp1;
-    HardCompound* comp2;
+    SoftCompound* comp0 ;
+    MediumCompound* comp1 ;
+    HardCompound* comp2 ;
+    
     for (int i = 0;i<5; ++i) {
         tyres[i]= rand() % 3;
         switch (tyres[i]) {
             case 0:
-                //comp0 = new SoftCompound();
-                comp0->print();
+                comp0 = new SoftCompound();
+                this->RaceStrategies.push_back(comp0);
                 break;
             case 1:
                 comp1 = new MediumCompound();
-                comp1->print();
+                this->RaceStrategies.push_back(comp1);
                 break;
             case 2:
                 comp2 = new HardCompound();
-                comp2->print();
+                this->RaceStrategies.push_back(comp2);
                 break;
         }
     }
+
+    for(int i =0; i < RaceStrategies.size() ; i++){
+		RaceStrategies.operator[](i)->chooseStrategy();
+
+	}
 }
 
 Tyre * EngineeringTeam::produce() {
@@ -65,9 +93,13 @@ Tyre * EngineeringTeam::produce() {
 Tyre* EngineeringTeam::produceProduct(){ return NULL;}
 
 
-/*RaceCar* EngineeringTeam::getCar(){
+RaceCar* EngineeringTeam::getCar(){
     return this->car;
-}*/
+}
+
+void EngineeringTeam::setCar(RaceCar* c){
+
+}
 
 
 SoftCreator::SoftCreator(){}
@@ -90,6 +122,14 @@ Tyre * HardCreator::produceProduct() {
 
 EngineeringTeam::~EngineeringTeam() {
     delete this->component;
+    delete this->car;
+
+    for(int i =0; i < RaceStrategies.size() ; i++){
+		delete RaceStrategies.operator[](i);
+	}
+    for(int i =0; i < Departments.size() ; i++){
+		delete Departments.operator[](i);
+	}
 }
 
 void EngineeringTeam::simulateComponent(Component *comp) {

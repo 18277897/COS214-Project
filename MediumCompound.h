@@ -19,7 +19,7 @@ public:
 	///This is the constructor
     MediumCompound();
 	///Notifies when the Medium Compound has been chosen
-    virtual void print();
+    virtual void chooseStrategy();
 };
 
 #endif
