@@ -2,19 +2,37 @@
 // Created by 27728 on 2020/11/02.
 //
 
-#ifndef UNTITLED13_ENGINEERINGTEAM_H
-#define UNTITLED13_ENGINEERINGTEAM_H
+#ifndef ENGINEERINGTEAM_H
+#define ENGINEERINGTEAM_H
 #include "Tyre.h"
 #include "RaceStrategy.h"
+#include "Component.h"
+#include "newComponents.h"
+#include "SoftCompound.h"
+#include "MediumCompound.h"
+#include "HardCompound.h"
+#include "Soft.h"
+#include "Medium.h"
+#include "Hard.h"
+#include "TestMediator.h"
+#include "trackFamiliarize.h"
+#include "RaceCar.h"
+
+#include <iostream>
+
+using namespace std;
 
 ///EngineeringTeam is the Context participant of the Strategy pattern aswell as the Creator participant for the Factory method
 ///
 ///
-
+class RaceCar;
 class EngineeringTeam {
 private:
     ///Chosen compounds for each set of tyres
     int tyres[5];
+    Component* component; //!> Component member
+    RaceCar* car;
+
 public:
 	///This is the constructor
     EngineeringTeam();
@@ -24,6 +42,27 @@ public:
     void chooseStrategy();
 	///This is an abstract member function that will be implemented in the concrete creator (SoftCreator, MediumCreator, HardCreator)
     virtual Tyre* produceProduct();
+
+    /// Destructor to deallocate component member
+    ~EngineeringTeam();
+
+    /**
+     * Function provides component for the simulation
+     * @param component the component to simulate
+     */
+    void simulateComponent(Component* component);
+
+    /// Accessor method for private component member
+    Component* getComponent();
+
+    ///This member function initiates the simulator.
+    void algorithm();
+
+    ///Virtual / abstract function used to call the improvePart() function of all the departments
+    void beginWork(RaceCar* car){};
+
+    ///Accesor method for private Racecar member
+    //RaceCar* getCar();
 };
 
 ///SoftCreator is the ConcreteCreator for the Factory method
@@ -65,4 +104,4 @@ public:
 
 
 
-#endif //UNTITLED13_ENGINEERINGTEAM_H
+#endif 

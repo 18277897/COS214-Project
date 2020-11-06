@@ -21,14 +21,14 @@ int main() {
     cout<<endl;
 
     et->produce();
-
+/*
     /////////////////Simulator//////////////////
     cout<<endl;
     cout<<"/////////////Simulator - Mediator///////////////"<<endl;
     cout<<endl;
 
     Component* nComp = new Component();
-    nComp->algorithm();
+    nComp->algorithm();*/
 
 
 

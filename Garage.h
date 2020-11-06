@@ -12,8 +12,9 @@ class Garage : public Equipment {
 
 
 public:
+	//This is the constructor for the garage equipment
 	Garage();
-
+	//This assembles the building equipment at the race
 	virtual void assembleEquipment();
 };
 

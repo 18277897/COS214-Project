@@ -2,7 +2,7 @@
 
 void NonEuropeanRace::startRace() {
 	// TODO - implement NonEuropeanRace::startRace
-	throw "Not yet implemented";
+	//throw "Not yet implemented";
 }
 
 void NonEuropeanRace::setUpEquipment() {
@@ -23,5 +23,5 @@ void NonEuropeanRace::addRaceCar(RaceCar* car){
 
 NonEuropeanRace::NonEuropeanRace() {
 	// TODO - implement NonEuropeanRace::NonEuropeanRace
-	throw "Not yet implemented";
+	//throw "Not yet implemented";
 }

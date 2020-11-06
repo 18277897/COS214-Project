@@ -12,24 +12,20 @@ Simulator::Simulator(){}
 
 
 
-newComponents::newComponents(){}
-void newComponents::change(){
-    cout<<"Component failed and is being replaced."<<endl;
-}
-void newComponents::print(){
-    cout<<"Testing components."<<endl;
-    int correct = rand()% 2;
-    if (correct == 0){
-        change();
-        print();
-    }
-    else {
-        cout << "Components tested successfully." << endl;
-    }
-}
+//newComponents::newComponents(){}
+//void newComponents::change(){
+//    cout<<"Component failed and is being replaced."<<endl;
+//}
+//void newComponents::print(){
+//    cout<<"Testing components."<<endl;
+//    int correct = rand()% 2;
+//    if (correct == 0){
+//        change();
+//        print();
+//    }
+//    else {
+//        cout << "Components tested successfully." << endl;
+//    }
+//}
 
-trackFamiliarize::trackFamiliarize(){}
-void trackFamiliarize::change(){}
-void trackFamiliarize::print(){
-    cout<<"Familiarizing the track."<<endl;
-}
+

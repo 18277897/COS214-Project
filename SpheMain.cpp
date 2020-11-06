@@ -47,22 +47,7 @@ int main(){
     ServiceCar1AerodynamicsInvoke->press();
 // NB! isServiced variable should be changed to true when servicing is done..... READ THIS!!!!
     cout<<endl;
-
-    delete car1;
-    delete serviceCar1Engine;
-    delete serviceCar1Electronics;
-    delete serviceCar1Chassis;
-    delete serviceCar1Aerodynamics;
-
-
-    car1=nullptr;
-    serviceCar1Engine=nullptr;
-    serviceCar1Electronics= nullptr;
-    serviceCar1Chassis=nullptr;
-    serviceCar1Aerodynamics=nullptr;
-
-    cout<<endl;
-
+    
     //Testing Departments
     Department* testDepartment1 = new Aerodynamics();
     Department* testDepartment2 = new Electronics();
@@ -70,7 +55,6 @@ int main(){
     Department* testDepartment4 = new Chassis();
     cout<<"Testing departments"<<endl;
 
-  //  testDepartment1->improvePart();
     testDepartment1->improvePart();
     testDepartment2->improvePart();
     testDepartment3->improvePart();
@@ -83,17 +67,7 @@ int main(){
     DepartmentDecorator *decorator1 = new Brakes(testDepartment4);
     decorator1->improvePart();
 
-    delete testDepartment1;
-    delete testDepartment2;
-    delete testDepartment3;
-    delete testDepartment4;
-    delete decorator1;
-
-    testDepartment1=nullptr;
-    testDepartment2= nullptr;
-    testDepartment3=nullptr;
-    testDepartment4=nullptr;
-    decorator1=nullptr;
+    
 
 
     return 0;

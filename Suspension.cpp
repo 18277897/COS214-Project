@@ -11,7 +11,7 @@ Suspension::Suspension(Department *department) : DepartmentDecorator(department)
 
 void Suspension::improvePart() {
     department->improvePart();
-    cout<<"and improved the car's suspension"<<endl;
+    cout<<"(and also improved the car's suspension)"<<endl;
 }
 
 Suspension::~Suspension() {

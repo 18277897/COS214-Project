@@ -2,7 +2,7 @@
 
 void EuropeanRace::startRace() {
 	// TODO - implement EuropeanRace::startRace
-	throw "Not yet implemented";
+	//throw "Not yet implemented";
 }
 
 void EuropeanRace::setUpEquipment() {

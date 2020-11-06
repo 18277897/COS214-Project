@@ -7,6 +7,7 @@
 using namespace std;
 
 int main(){
+    
     TrackStatus* ts = new TrackStatus();
     CarPlacing* cp = new CarPlacing(ts);
     Track* t = new Track();

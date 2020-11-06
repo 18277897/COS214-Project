@@ -20,11 +20,11 @@ public:
 
 	vector<F1Team*> teams; //wont need
 
-	//perhaps have a run qualifiers which would happen before the race function
-	virtual void startRace();//not gonna impliment this as it is the essential of the main
-
+	///perhaps have a run qualifiers which would happen before the race function
+	virtual void startRace();
+	///Sets up all the Equipment in the Truck by calling the Equipments assembleEquipment fucntion
 	virtual void setUpEquipment();
-
+	///Adds a racecar to the car vector for the race
 	virtual void addRaceCar(RaceCar* car);
 
 	NonEuropeanRace();

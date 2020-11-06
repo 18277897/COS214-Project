@@ -3,19 +3,25 @@
 //
 
 #include "EngineeringTeam.h"
+#include "RaceCar.h"
+#include <iostream>
+
+using namespace std;
 
 
-EngineeringTeam::EngineeringTeam() {}
+EngineeringTeam::EngineeringTeam(){
+    this->component = NULL;
+}
 
 void EngineeringTeam::chooseStrategy() {
-    SoftCompound* comp0;
+    SoftCompound* comp0 = new SoftCompound();
     MediumCompound* comp1;
     HardCompound* comp2;
     for (int i = 0;i<5; ++i) {
         tyres[i]= rand() % 3;
         switch (tyres[i]) {
             case 0:
-                comp0 = new SoftCompound();
+                //comp0 = new SoftCompound();
                 comp0->print();
                 break;
             case 1:
@@ -52,13 +58,19 @@ Tyre * EngineeringTeam::produce() {
                 break;
         }
     }
+    return NULL;
 
 }
 
-Tyre* EngineeringTeam::produceProduct(){}
+Tyre* EngineeringTeam::produceProduct(){ return NULL;}
 
 
-SoftCreator::SoftCreator() {}
+/*RaceCar* EngineeringTeam::getCar(){
+    return this->car;
+}*/
+
+
+SoftCreator::SoftCreator(){}
 Tyre * SoftCreator::produceProduct() {
     Tyre* ty = new Soft();
     return ty;
@@ -74,4 +86,28 @@ HardCreator::HardCreator() {}
 Tyre * HardCreator::produceProduct() {
     Tyre* ty = new Hard();
     return ty;
+}
+
+EngineeringTeam::~EngineeringTeam() {
+    delete this->component;
+}
+
+void EngineeringTeam::simulateComponent(Component *comp) {
+    //cout << "Debug Inner" <<endl;
+    this->component = comp;
+}
+
+Component * EngineeringTeam::getComponent() {
+    return this->component;
+}
+
+void EngineeringTeam::algorithm() {
+
+    TestMediator* com = new TestMediator("Test 1");
+    newComponents* breaks = new newComponents(getComponent());
+    Simulator* track = new trackFamiliarize();
+    com->notify(true);
+    track->print();
+    breaks->print();
+    com->notify(false);
 }

@@ -11,7 +11,7 @@ Brakes::Brakes(Department *department) : DepartmentDecorator(department)  {
 
 void Brakes::improvePart() {
     department->improvePart();
-    cout<<"and improved the car's brakes"<<endl;
+    cout<<"(and improved the car's brakes)"<<endl;
 }
 
 Brakes::~Brakes() {

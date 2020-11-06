@@ -12,8 +12,9 @@ class Catering : public Equipment {
 
 
 public:
+	//Constructor for the catering equipment
 	Catering();
-
+	//This assembles the building equipment at the race
 	virtual void assembleEquipment();
 };
 
