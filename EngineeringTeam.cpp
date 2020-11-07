@@ -4,6 +4,9 @@
 
 #include "EngineeringTeam.h"
 #include "RaceCar.h"
+#include "HardCreator.h"
+#include "MediumCreator.h"
+#include "SoftCreator.h"
 #include <iostream>
 
 using namespace std;
@@ -21,7 +24,7 @@ EngineeringTeam::EngineeringTeam(){
     this->Departments.push_back(AerodynamicsDepartment);
     this->Departments.push_back(ElectronicsDepartment);
     this->Departments.push_back(EngineDepartment);
-    this->Departments.push_back(ChassisBrakesDecor);
+    this->Departments.push_back(ChassisDepartment);
 
     //strategy functionality
     
@@ -102,24 +105,6 @@ void EngineeringTeam::setCar(RaceCar* c){
 }
 
 
-SoftCreator::SoftCreator(){}
-Tyre * SoftCreator::produceProduct() {
-    Tyre* ty = new Soft();
-    return ty;
-}
-
-MediumCreator::MediumCreator() {}
-Tyre * MediumCreator::produceProduct() {
-    Tyre* ty = new Medium();
-    return ty;
-}
-
-HardCreator::HardCreator() {}
-Tyre * HardCreator::produceProduct() {
-    Tyre* ty = new Hard();
-    return ty;
-}
-
 EngineeringTeam::~EngineeringTeam() {
     delete this->component;
     delete this->car;
@@ -150,4 +135,12 @@ void EngineeringTeam::algorithm() {
     track->print();
     breaks->print();
     com->notify(false);
+}
+
+Department* EngineeringTeam::getDepartment(int i){
+    return this->Departments.operator[](i);
+}
+
+void EngineeringTeam::swapDeparment(int i, Department* swapDecorator){
+    this->Departments.operator[](i) = swapDecorator;
 }

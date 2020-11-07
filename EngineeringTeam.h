@@ -27,6 +27,8 @@
 #include "Brakes.h"
 #include "Suspension.h"
 
+
+
 #include <vector>
 #include <iostream>
 
@@ -35,9 +37,9 @@ using namespace std;
 ///EngineeringTeam is the Context participant of the Strategy pattern aswell as the Creator participant for the Factory method
 ///
 ///
-class Department;
-class Engine;
-class RaceCar;
+class HardCreator;
+class MediumCreator;
+class SoftCreator;
 class EngineeringTeam {
 private:
     ///Chosen compounds for each set of tyres
@@ -84,43 +86,22 @@ public:
 
     ///Mutator method for private Racecar member
     void setCar(RaceCar* c);
+
+    ///accesssor for the department private variable
+    ///@param i is the selector for which department to get
+    ///@return returns a pointer to a department
+    Department* getDepartment(int i);
+
+    ///method to swap a normal department with a decorated department
+    ///@param i selects which department to swap out
+    ///@param swapDecorator is the decorated department to swap with
+    void swapDeparment(int i, Department* swapDecorator);
 };
 
-///SoftCreator is the ConcreteCreator for the Factory method
-///
-///Creates the soft compound tyre
 
-class SoftCreator: public EngineeringTeam{
-public:
-	///This is the constructor
-    SoftCreator();
-	///Creates a new soft compound
-    Tyre* produceProduct();
-};
 
-///MediumCreator is the ConcreteCreator for the Factory method
-///
-///Creates the soft compound tyre
 
-class MediumCreator: public EngineeringTeam {
-public:
-	///This is the constructor
-    MediumCreator();
-	///Creates a new medium compound
-    Tyre* produceProduct();
-};
 
-///HardCreator is the ConcreteCreator for the Factory method
-///
-///Creates the soft compound tyre
-
-class HardCreator: public EngineeringTeam {
-public:
-	///This is the constructor
-    HardCreator();
-	///Creates a new hard compound
-    Tyre* produceProduct();
-};
 
 
 

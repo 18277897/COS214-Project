@@ -42,6 +42,9 @@
 #include "RaceCarCaretaker.h"
 #include "RaceCarMemento.h"
 #include "MementoState.h"
+#include "HardCreator.h"
+#include "MediumCreator.h"
+#include "SoftCreator.h"
 
 
 
@@ -184,6 +187,14 @@ int main(){
     FFEteam->improveParts();
     //ChassisDepartment->improvePart();
     cout<<"---------------------------------------------------------------"<<endl;
+    //FFEteam->getDepartment(3);
+    cout << "Decorator Functionality." << endl;
+    DepartmentDecorator* ChassisBrakesDecor = new Brakes(FFEteam->getDepartment(3));
+    
+    cout<<"---------------------------------------------------------------"<<endl;
+
+    FFEteam->swapDeparment(3,ChassisBrakesDecor);
+    FFEteam->improveParts();
     /*// Make chassis department also work on brakes
     DepartmentDecorator *decorator1 = new Brakes(ChassisDepartment);
     decorator1->improvePart();*/
