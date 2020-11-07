@@ -8,6 +8,13 @@ Track::Track() {
 
 }
 
+Track::~Track() {
+    delete this->team;
+    delete this->unnamed_F1Team_;
+    delete this->cp1;
+    delete this->ts;
+}
+
 void Track::Set(CarPlacing* cppp
                 , TrackStatus* tss){
     cp1 = cppp;
