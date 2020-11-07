@@ -148,7 +148,7 @@ int main(){
 
     // This creates and tests one component
     Component* carComponent = new Component();
-    EngineeringTeam* FFEteam = new EngineeringTeam();
+    EngineeringTeam* FFEteam = new CurrentF1SeasonTeam();
     cout<<endl;
     //FFEteam.
     FFEteam->simulateComponent(carComponent);
