@@ -71,6 +71,8 @@ int main(){
     FFspeedo->printDetails();
     //prototype
     RaceCar* FFsonic = FFspeedo->clone("FFsonic");
+
+    
     
     FunkyFive->setCars(FFspeedo,FFsonic);
     FFsonic->setServiced(false); //set to false so we can see the servicing functionality
@@ -89,6 +91,8 @@ int main(){
     // create states
     RaceCarState *state1 = new Serviced();
     RaceCarState *state2 = new NeedsService();
+
+    
 
     // car 1
     cout<<"RACE CAR STATE FOR: " << FunkyFive->getCar(1)->getName() <<endl;
@@ -115,6 +119,8 @@ int main(){
     CharteredPlane* FFplane = new CharteredPlane();
     FFplane->flyToFactory(FunkyFive->getCar(1));
     FFplane->flyToFactory(FunkyFive->getCar(2));
+
+    
     
 
     cout << "========================================================" << endl;
@@ -131,6 +137,7 @@ int main(){
     ServiceFactory *ServiceCar1ElectronicsInvoker =new ServiceFactory(serviceCar1Electronics);
     ServiceFactory *ServiceCar1ChassisInvoke =new ServiceFactory(serviceCar1Chassis);
     ServiceFactory *ServiceCar1AerodynamicsInvoke =new ServiceFactory(serviceCar1Aerodynamics);
+    
 
 
     //Servicing Car1 ----COMMAND PATTERN-----
@@ -156,6 +163,7 @@ int main(){
     //FFEteam.
     FFEteam->simulateComponent(carComponent);
     FFEteam->algorithm();
+    
 
     // strategy
     srand(time(NULL));
@@ -165,24 +173,18 @@ int main(){
         TestingStrategy *simulation = new SoftwareSimulations();
         carComponent->setTestingStrategy(simulation);
         carComponent->testComponent();
+        //delete simulation;
     }else{
         TestingStrategy *wind = new WindTunnel(400);
         carComponent->setTestingStrategy(wind);
         carComponent->testComponent();
     }
 
+    
+
     cout << "========================================================" << endl;
     cout << "Components tested so now upgrading the car (This makes use of the Decorator design pattern)" <<endl;
     cout << "========================================================" << endl;
-
-    /*Department* AerodynamicsDepartment = new Aerodynamics();
-    Department* ElectronicsDepartment = new Electronics();
-    Department* EngineDepartment = new Engine();
-    Department* ChassisDepartment = new Chassis();
-
-    AerodynamicsDepartment->improvePart();
-    ElectronicsDepartment->improvePart();
-    EngineDepartment->improvePart();*/
 
     FFEteam->improveParts();
     //ChassisDepartment->improvePart();
@@ -190,6 +192,8 @@ int main(){
     //FFEteam->getDepartment(3);
     cout << "Decorator Functionality." << endl;
     DepartmentDecorator* ChassisBrakesDecor = new Brakes(FFEteam->getDepartment(3));
+
+    
     
     cout<<"---------------------------------------------------------------"<<endl;
 
@@ -236,7 +240,6 @@ int main(){
     Catering* cateringEquip = new Catering();
     Building* buildingEquip = new Building();
 
-    
 
     Truck* FFTruck = new Truck();
     //cateringEquip->assembleEquipment();
@@ -245,7 +248,10 @@ int main(){
     FFTruck->addtoContainer(buildingEquip);
     //cout << "Hello." <<endl;
 
+    
+
     EuropeanRace* TheFirst =  new EuropeanRace();
+
     
     TheFirst->truck = FFTruck;
     TheFirst->addRaceCar(FunkyFive->getCar(1));
@@ -393,6 +399,77 @@ int main(){
     cout << "Servicing car and restoring the levels for the car" <<endl;
     FunkyFive->getCar(1)->restore(mem); // restores the original values
     FunkyFive->getCar(1)->printDetails();
+
+    //deallocation
+
+    FunkyFive = NULL;
+    mem = NULL;
+    FFsonic = NULL;
+    FFspeedo = NULL;
+    state1 = NULL;
+    state2 = NULL;
+
+    FFplane = NULL;
+    serviceCar1Engine = NULL;
+    serviceCar1Electronics = NULL;
+    serviceCar1Chassis = NULL;
+    serviceCar1Aerodynamics = NULL;
+
+    ServiceCar1EngineInvoker = NULL;
+    ServiceCar1ElectronicsInvoker = NULL;
+    ServiceCar1ChassisInvoke = NULL;
+    ServiceCar1AerodynamicsInvoke = NULL;
+
+    carComponent = NULL;
+    FFEteam = NULL;
+
+    ChassisBrakesDecor = NULL;
+
+    garageEquip = NULL;
+    cateringEquip = NULL;
+    buildingEquip = NULL;
+    FFTruck = NULL;
+    TheFirst = NULL;
+    ts = NULL;
+    cp = NULL;
+    t = NULL;
+
+    delete FunkyFive;
+
+    delete FFspeedo;
+    
+    delete mem;
+    
+    delete FFsonic;
+    
+    delete state1;
+    delete state2;
+
+    delete FFplane;
+
+    delete serviceCar1Engine;
+    delete serviceCar1Electronics;
+    delete serviceCar1Chassis;
+    delete serviceCar1Aerodynamics;
+    
+    delete ServiceCar1EngineInvoker;
+    delete ServiceCar1ElectronicsInvoker;
+    delete ServiceCar1ChassisInvoke;
+    delete ServiceCar1AerodynamicsInvoke;
+
+    delete carComponent;
+    delete FFEteam;
+
+    delete ChassisBrakesDecor;
+    
+    delete garageEquip;
+    delete cateringEquip;
+    delete buildingEquip;
+    delete FFTruck;
+    delete TheFirst;
+    delete ts;
+    delete cp;
+    delete t;
 
     return 0;
 }
