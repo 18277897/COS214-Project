@@ -16,7 +16,7 @@ class TestingStrategy {
 
 public:
     /// Default constructor
-    //TestingStrategy();
+    TestingStrategy();
 
     /**
      * Pure virtual function to be implemented by subclasses: WindTunnel, SoftwareSimulations.

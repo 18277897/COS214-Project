@@ -13,9 +13,8 @@ private:
 
 public:
 
-NextF1SeasonTeam(){};
-virtual void beginWork(RaceCar* car){ /*basically for upgrading the car, willl be implimented once all work is done*/};
-
+NextF1SeasonTeam();
+virtual void beginWork();
 
 };
 

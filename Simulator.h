@@ -17,7 +17,7 @@ private:
     CompMediator* medi;
 public:
 	///This is the constructor
-    //Simulator();
+    Simulator();
 	///This is an abstract member function that will be implemented in the concrete colleages (newComponents, trackFamiliarize)
     virtual void change() = 0;
 	///This is an abstract member function that will be implemented in the concrete colleages (newComponents, trackFamiliarize)

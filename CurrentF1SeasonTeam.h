@@ -13,8 +13,9 @@ private:
 
 public:
 
-CurrentF1SeasonTeam(){};
-virtual void beginWork(RaceCar* car){ /*basically for upgrading the car, willl be implimented once all work is done*/};
+CurrentF1SeasonTeam();
+virtual void beginWork();
+
 
 
 };

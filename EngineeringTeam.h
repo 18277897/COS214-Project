@@ -77,9 +77,9 @@ public:
     void algorithm();
 
     ///Virtual / abstract function used to call the improvePart() function of all the departments
-    void beginWork(RaceCar* car){};
+    virtual void beginWork();
 
-    void improveParts();
+    virtual void improveParts();
 
     ///Accesor method for private Racecar member
     RaceCar* getCar();

@@ -38,6 +38,10 @@ void EngineeringTeam::improveParts(){
 	}
 }
 
+void EngineeringTeam::beginWork(){
+    cout << "" <<endl;
+}
+
 void EngineeringTeam::chooseStrategy() {
     SoftCompound* comp0 ;
     MediumCompound* comp1 ;

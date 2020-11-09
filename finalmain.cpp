@@ -402,6 +402,11 @@ int main(){
 
     //deallocation
 
+    
+
+ //
+    
+
     FunkyFive = NULL;
     mem = NULL;
     FFsonic = NULL;
@@ -432,36 +437,8 @@ int main(){
     TheFirst = NULL;
     ts = NULL;
     cp = NULL;
-    t = NULL;
+    t = NULL; 
 
-    delete FunkyFive;
-
-    delete FFspeedo;
-    
-    delete mem;
-    
-    delete FFsonic;
-    
-    delete state1;
-    delete state2;
-
-    delete FFplane;
-
-    delete serviceCar1Engine;
-    delete serviceCar1Electronics;
-    delete serviceCar1Chassis;
-    delete serviceCar1Aerodynamics;
-    
-    delete ServiceCar1EngineInvoker;
-    delete ServiceCar1ElectronicsInvoker;
-    delete ServiceCar1ChassisInvoke;
-    delete ServiceCar1AerodynamicsInvoke;
-
-    delete carComponent;
-    delete FFEteam;
-
-    delete ChassisBrakesDecor;
-    
     delete garageEquip;
     delete cateringEquip;
     delete buildingEquip;
@@ -470,6 +447,36 @@ int main(){
     delete ts;
     delete cp;
     delete t;
+
+    delete ChassisBrakesDecor;
+
+
+    delete carComponent;
+    delete FFEteam;
+
+    delete ServiceCar1EngineInvoker;
+    delete ServiceCar1ElectronicsInvoker;
+    delete ServiceCar1ChassisInvoke;
+    delete ServiceCar1AerodynamicsInvoke;
+
+    delete serviceCar1Engine;
+    delete serviceCar1Electronics;
+    delete serviceCar1Chassis;
+    delete serviceCar1Aerodynamics;
+
+    delete FFplane;
+
+    delete state1;
+    delete state2;
+
+    delete FFsonic;
+
+    delete mem;
+
+    delete FFspeedo;
+    delete FunkyFive;
+
+    
 
     return 0;
 }

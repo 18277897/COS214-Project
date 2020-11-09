@@ -12,9 +12,9 @@
 class Tyre {
 public:
 	///This is the constructor
-    //Tyre();
+    Tyre();
 	///This is an abstract member function that will be implemented in the inherreting classes
-    virtual void print(){};
+    virtual void print()=0;
 };
 
 
