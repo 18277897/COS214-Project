@@ -1,5 +1,4 @@
 #include "RaceCar.h"
-#include "MementoState.h"
 
 
 RaceCar::RaceCar() {
@@ -28,12 +27,6 @@ RaceCar::RaceCar(bool iS,int tP,double fL,double wL,string n) {
 	this->waterLevel = wL;
 	this->name = n;
 }
-RaceCar::RaceCar(int tP,double fL,double wL,string n){
-	this->tyrePressure = tP;
-	this->fuelLevel = fL;
-	this->waterLevel = wL;
-	this->name = n;
-} // for memento
 
 RaceCar* RaceCar::clone(string n){
 
@@ -58,7 +51,7 @@ void RaceCar::setServiced(bool s){
 
 void RaceCar::raceAction() {
 	// TODO - implement RaceCar::raceAction
-	//throw "Not yet implemented";
+	throw "Not yet implemented";
 }
 
 void RaceCar::serviceCarAerodynamics() {
@@ -81,7 +74,6 @@ void RaceCar::serviceCarEngine() {
     cout<<"Servicing car's engine...."<<endl;
     cout<<"Car "+getName()+"'s engine serviced"<<endl;
 }
-
 
 RaceCar::~RaceCar() {
     delete this->current_state;

@@ -23,6 +23,7 @@ class CarPlacing: public F1Team
     /// This places the car on the track.
     ///@param ts initialises subject to a track status object
 	public: CarPlacing(TrackStatus* ts);
+    public: ~CarPlacing();
 
     /// This updates the postions of each car.
 	public: void update();
