@@ -8,7 +8,7 @@
 #include <iostream>
 using namespace std;
 
-
+///This class transports the car between races and to the service factory
 class CharteredPlane {
 
 private:

@@ -34,12 +34,13 @@
 
 using namespace std;
 
-///EngineeringTeam is the Context participant of the Strategy pattern aswell as the Creator participant for the Factory method
+
 ///
 ///
 class HardCreator;
 class MediumCreator;
 class SoftCreator;
+///EngineeringTeam [Forms part of many patterns] is the Context participant of the Strategy pattern aswell as the Creator participant for the Factory method
 class EngineeringTeam {
 private:
     ///Chosen compounds for each set of tyres

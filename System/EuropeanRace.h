@@ -12,7 +12,7 @@
 #include <vector>
 using namespace std;
 
-
+///EuropeanRace is the ConcreteClass in the template method
 class EuropeanRace : public F1Race {
 
 private:

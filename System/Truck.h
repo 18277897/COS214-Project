@@ -10,6 +10,7 @@
 #include <vector>
 using namespace std;
 
+///This class transports Equipment in a container(vector) to the races
 class Truck {
 
 public:

@@ -7,6 +7,7 @@
 #include <iostream>
 #include "EngineeringTeam.h"
 
+///CurrentF1SeasonTeam is the ConcreteClass in the Template method and inherits from EngineeringTeam
 class CurrentF1SeasonTeam : public EngineeringTeam{
 
 private:

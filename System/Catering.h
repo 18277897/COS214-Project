@@ -8,6 +8,7 @@
 #include <iostream>
 using namespace std;
 
+///Catering is the ConcreteClass in the template method
 class Catering : public Equipment {
 
 

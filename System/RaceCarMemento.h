@@ -7,10 +7,10 @@
 #include "string"
 #include "MementoState.h"
 
-/// This class is the Memento participant of the Memento pattern
+
 
 using namespace std;
-
+/// This class is the Memento participant of the Memento pattern
 class RaceCarMemento {
 private:
     /// The RaceCar class will be creating the memento object and is declared a friend of this class, so it can access the private members

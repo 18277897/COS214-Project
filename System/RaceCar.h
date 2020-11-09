@@ -12,6 +12,7 @@
 
 using namespace std;
 class RaceCarState; // added to solve linking error
+///This class is part of many design patterns and one can refer to the report to see which ones
 class RaceCar  {
 
 private:

@@ -12,6 +12,8 @@
 #include <vector>
 using namespace std;
 
+
+///NonEuropeanRace is the ConcreteClass in the template method
 class NonEuropeanRace :public F1Race {
 
 public:

@@ -10,10 +10,6 @@ CarPlacing::CarPlacing(TrackStatus* ts) {
     subject = ts;
 }
 
-CarPlacing::~CarPlacing() {
-    delete this->subject;
-}
-
 void CarPlacing::update() {
 
 	placing[0] = subject->getState();

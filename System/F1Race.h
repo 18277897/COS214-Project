@@ -10,9 +10,10 @@
 #include <vector>
 using namespace std;
 
+///F1Race is the AbstractClass in the template method
 class F1Race {
 
-//should i make a private cars vector here?
+
 public:
 	///This is a constructor for an F1 race
 	F1Race();

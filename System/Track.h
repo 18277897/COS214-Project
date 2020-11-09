@@ -24,7 +24,6 @@ class Track
 
     /// This is the constructor of the class.
 	public: Track();
-    public: ~Track();
 
     /// This sets the correct car placing and track status.
     public: void Set(CarPlacing* cppp, TrackStatus* tss);

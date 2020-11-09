@@ -7,6 +7,7 @@
 #include <iostream>
 using namespace std;
 
+///Equipment is the AbstractClass in the template method
 class Equipment {
 
 
