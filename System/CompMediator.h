@@ -4,7 +4,7 @@
 
 #ifndef COMPMEDIATOR_H
 #define COMPMEDIATOR_H
-#include <String>
+#include <string>
 #include "Simulator.h"
 
 using namespace std;

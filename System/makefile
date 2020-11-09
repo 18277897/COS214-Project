@@ -1,6 +1,5 @@
 main:
-	g++ -c *.cpp
-	g++ -o main *.o
+	g++ *.cpp -o main
 
 run: main
 	./main
